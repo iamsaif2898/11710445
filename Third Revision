@@ -1,0 +1,25 @@
+time = proces[0].btime;
+      for(b=0;b<limit;b++)
+      {
+            for(count=b;count<limit;count++)
+            {
+                  if(proces[count].atime < time)
+                  {
+                        proces[count].ready = 1;
+                  }
+            }
+            for(count=b;count<limit-1;count++)
+            {
+                  for(a=count+1; a<limit; a++)
+                  {
+                        if(proces[count].ready == 1 && proces[a].ready == 1)
+                        {
+                              if(proces[count].p == 2 && proces[a].p == 1)
+                              {
+                                    temp = proces[count];
+                                    proces[count] = proces[a];
+                                    proces[a] = temp;
+                              }
+                        }
+                  }
+            }
