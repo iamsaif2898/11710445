@@ -1,0 +1,23 @@
+#include<stdio.h>
+#define N 10  
+
+typedef struct
+{
+//pr_id is process id
+//pr_prio is process priority
+//btime is process burst time
+//atime is process arrival time
+      int pr_id, atime,btime,pr_prio;
+      int p, ready;
+}proces_structure;
+int Queue(int t1)
+{
+      if(t1==0 || t1==1 || t1==2 || t1==3)
+      {
+            return 1;
+      }
+      else
+      {
+            return 2;
+      }
+}
