@@ -1,0 +1,12 @@
+ printf("\nProcess[%d]:\tTime:\t%d To %d\n", proces[b].pr_id, time, time + proces[b].btime);
+            time = time + proces[b].btime;
+            for(count=b; count<limit; count++)
+            {
+                  if(proces[count].ready==1)
+                  {
+                        proces[count].ready=0;
+                  }
+            }
+      }
+      return 0;
+}
